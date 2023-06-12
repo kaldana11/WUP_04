@@ -56,6 +56,7 @@ ggtitle("Fancy Box Plot")
 ```
  
  
+  LT High School would not overlap with Junior college or Graduate, thus showing that it is very unlikely to be different schooling. In addition, Gradate does not overlap with High school, Therefore, it also is likely to be different. Ultimately, LT High School and Graduate are not only different from one another, they are both different than another type of schooling, such as High school and Junior college.
  
 
 ### Numerical Descriptive Results
