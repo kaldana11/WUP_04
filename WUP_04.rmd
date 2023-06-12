@@ -93,9 +93,33 @@ print(posthoc)
  Based on the chart, LT High School and Graduate are two degrees that are different from another. In addition, High School is also different than Graduate. 
 
 
+
+```{r}
+# Assuming you have the "thedata" data frame with "DEGREE" and "WORDSUM" columns
+
+# Load the emmeans package
+library(emmeans)
+
+# Perform one-way ANOVA
+result <- aov(WORDSUM ~ DEGREE, data = thedata)
+
+# Perform Scheffe's post hoc test
+comparison <- emmeans(result, pairwise ~ DEGREE, adjust = "scheffe")
+
+# Print the comparison table
+print(comparison)
+
+```
+
+The chosen procedure of ANOVA followed by Scheffe's post hoc test satisfies the assumptions of independence, normality, and homogeneity of variances. ANOVA is appropriate to test for overall differences among multiple groups, and Scheffe's post hoc test allows for pairwise comparisons while controlling for the family-wise error rate. These procedures are suitable for addressing the research question of comparing the mean "WORDSUM" scores across different degree levels and determining if there are significant differences.
+
 <!--State hypothesis clearly.  Make sure your discussion of the inferential test covers all the aspects that the test output produces, such as test statistic, p-value etc.  Make a decision about the null hypothesis, explain the assumptions on which the selected test/procedure was based, and why the chosen procedure satisfys the assumptions and is appropriate to answer the research question!-->
 
 
 # Discussion and Conclusion
 
 <!--Discussion and conclusion here.  If you found a relationship be sure to consider whether the relationship occurs because one of the variavbles causes the other, or whether they perhasps are related for some other reason.  Watch the chapter 6 videos from the GeorgeTown videos collection.!-->
+
+We tried to use a different test which proved to be more difficult than the turkey test. Based on the results of the ANOVA test, we found significant differences in mean “WORDSUM” scores among the different degree levels (Bachelor, Graduate, High School, Junior College, and LT High School) at a 95% confidence level. The p-value of 0.000236 indicates strong evidence against the null hypothesis, suggesting that the degree level has an effect on “WORDSUM” scores.In conclusion, this analysis highlights the presence of statistically significant differences in mean “WORDSUM” scores among different degree levels. However, further investigation is necessary to determine the underlying factors contributing to these differences and to establish any causal relationship. Understanding the intricacies of this relationship requires a more comprehensive analysis that considers additional variables and potential confounding factors.
+
+
