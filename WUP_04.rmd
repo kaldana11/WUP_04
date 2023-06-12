@@ -31,7 +31,7 @@ $H_a$ There is a significant difference in average score on the WORDSUM test bet
 
 <!--Mention that you intend to use chatGPT to the greatest extent possible. Give credit to chatGPT when you use it to create code in your report. Decide on your methods:  use "variable analysis" or other appropriate descriptors.  Make sure to choose at least one graphical method and at least one numerical method.!-->
 
-first we wanted to find out by looking at the data we had in WUP 3. We copied Write Up 3 to read the data in and changed the character variables into factor variables and saw that we had a numerical data which was WORDSUM and we now have a factor called DEGREE. We deduced that we have a problem called numerical ~ categorical problem.
+First we wanted to find out by looking at the data we had. We copied Write Up 3 to read the data and changed the character variables into factor variables and saw that we had a numerical data which was WORDSUM and we now have a factor called DEGREE. We deduced that we have a problem called numerical ~ categorical problem.
 
 
 # Results
